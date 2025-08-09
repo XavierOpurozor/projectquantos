@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Quantos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="game-container">
+        <h1 class="game-title">Project Quantos</h1>
+        <p class="subtitle">Secure The Number</p>
+        
+        <form id="settings-form" class="settings-frame">
+            <div class="setting">
+                <label for="min-range">Min Number:</label>
+                <input type="number" id="min-range" value="1" min="1" max="99">
+            </div>
+            <div class="setting">
+                <label for="max-range">Max Number:</label>
+                <input type="number" id="max-range" value="100" min="10" max="999">
+            </div>
+            <div class="setting">
+                <label for="max-attempts">Max Attempts:</label>
+                <input type="number" id="max-attempts" value="5" min="1" max="20">
+            </div>
+        </form>
+
+        <p id="status-label" class="game-status">Attempts left: 5 / 5</p>
+        <p id="result-label" class="game-feedback">Click 'New Game' to start!</p>
+
+        <input type="number" id="guess-entry" placeholder="Your Guess" autocomplete="off">
+
+        <div class="button-container">
+            <button id="guess-button" class="game-button" disabled>Guess!</button>
+            <button id="hint-button" class="game-button hint-button" disabled>Hint (Costs 1 attempt)</button>
+        </div>
+
+        <button id="new-game-button" class="game-button new-game-button">New Game</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
